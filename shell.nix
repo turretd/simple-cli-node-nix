@@ -1,7 +1,9 @@
 { pkgs ? import <nixpkgs> {} }:
 pkgs.mkShell {
-  buildInputs = [
-    pkgs.nodejs
-    pkgs.yarn
+  buildInputs = with pkgs; [
+    nodejs
+    yarn
+    nodePackages.node2nix
   ];
+  DIRENV_LOG_FORMAT="";
 }

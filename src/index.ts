@@ -6,5 +6,5 @@ const argv = yargs(hideBin(process.argv)).argv
 if (argv.ships > 3 && argv.distance < 53.5) {
   console.log('Run to the deck!')
 } else {
-  console.log('Oh no, I dropped my devil fruit!')
+  console.log('Oh no, I dropped my devil fruits!')
 }

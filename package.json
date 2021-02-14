@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "ncc build index.js",
+    "build": "ncc build -m index.js",
     "test": "echo 'to implement'"
   },
   "dependencies": {

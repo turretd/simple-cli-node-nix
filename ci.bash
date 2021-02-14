@@ -3,5 +3,6 @@
 
 set -euo pipefail
 
+yarn
 yarn test
 yarn build

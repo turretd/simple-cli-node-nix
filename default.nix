@@ -13,6 +13,9 @@ pkgs.stdenv.mkDerivation {
     yarn build
   '';
   installPhase = ''
-    cp -r dist $out/
+    target=$out/bin/simple-cli
+    >>$target echo '#!${nodejs}/bin/node'
+    >>$target echo "require('$src/dist/index.js')";
+    chmod +x $target
   '';
 }

@@ -15,7 +15,7 @@ pkgs.stdenv.mkDerivation {
   installPhase = ''
     mkdir -p $out/bin
     target=$out/bin/simple-cli
-    cp $src/dist/index.js $out/bin/index.js
+    cp dist/index.js $out/bin/index.js
     >>$target echo '#!${pkgs.nodejs}/bin/node'
     >>$target echo "require('./index.js')";
     chmod +x $target
